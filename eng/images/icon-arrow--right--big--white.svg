@@ -1,0 +1,8 @@
+<svg id="icon-arrow--right--big--white" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <rect id="Rectangle_23152" data-name="Rectangle 23152" width="40" height="40" fill="#fff" opacity="0"/>
+  <g id="arrow-gray" transform="translate(2 9)">
+    <line id="Line_105" data-name="Line 105" x2="34" transform="translate(0 10.573)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.2"/>
+    <line id="Line_106" data-name="Line 106" x2="10.537" y2="10.537" transform="translate(24.543)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.2"/>
+    <line id="Line_107" data-name="Line 107" y1="10.537" x2="10.537" transform="translate(24.543 10.668)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.2"/>
+  </g>
+</svg>

@@ -1,0 +1,255 @@
+/*模組區*/
+/*最新消息、政令宣導、便民服務列表*/
+.modNewsProList
+    width: 100%
+    position: relative
+    z-index: 2
+    padding: 0 30px 50px 30px
+    @include com1280
+        width: 33%
+        padding: 0 30px 50px 30px
+    @include com1920
+        padding: 0 40px 30px 40px
+.modNewsProList-imgBk
+    width: 100%
+    aspect-ratio: 4 / 3
+    // background: $bg-gray-100
+    border-radius: 6px
+    // border: $gray-line
+    text-align: center
+    line-height: 0
+    margin: 0 0 40px 0
+.modNewsProList-imgBk--img
+    height: 100%
+    object-fit: contain
+    width: 100%
+.modNewsProList-subArea
+    font:
+        size: $text-14
+    margin: 0 0 20px 0
+    @include com1280
+        font:
+            size: $text-16
+.modNewsProList-subArea--main
+    color: $em-color
+    padding: 0 5px 0 0
+    &::after
+        content:" |"
+.modNewsProList-subArea--date
+    color: $text-gray
+.modNewsProList-link
+    display: block
+    font:
+        size: $text-18
+    margin: 0 0 25px 0
+    color: $black
+    &:hover,&:active,&:focus
+        color: $em-color
+    @include com1280
+        font:
+            size: $text-22
+.modNewsProList-cite
+    font:
+        size: $text-15
+        style: normal
+        family: 'NotoSansTC-Regular'
+    color: $text-gray
+    line-height: 1.7
+    @include com1280
+        font:
+            size: $text-18
+.modNewsProList-linkDecBt
+    width: 60px
+    height: 60px
+    border-radius: 30px
+    border: 1px solid $em-color
+    text-align: center
+    padding: 8px 0 0 0
+
+
+
+
+/*重要連結模組*/
+.modLinkBk
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+.modLink
+    width: 100%
+    border: $gray-line
+    padding: 20px 60px 16px 30px
+    display: flex
+    align-items: center
+    justify-items: stretch
+    position: relative
+    margin-top: -1px
+    font:
+        size: $text-16
+    color: $black
+    background: #FFF
+    @include com1280
+        flex-wrap: nowrap
+        width: 33%
+        margin: 0 0 12px 0
+    @include com1920
+        font:
+            size: $text-19
+        padding: 25px 80px 21px 40px
+    &:hover,&:active,&:focus
+.modLink-arrowBk
+    width: 50px
+    height: 100%
+    right: 0
+    top: 0
+    background: $sec-color
+    position: absolute
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+
+    
+/*內頁模組*/
+.modPagArticle
+    width: 100%
+    @include com1280
+        display: flex
+        flex-wrap: nowrap
+.modPagArticle-dateBk
+    width: 100%
+    margin: 0 0 20px 0
+    text-align: center
+    @include com1280
+        width: 10%
+.modPagArticle-dateBk--tit
+    font:
+        size: $text-16
+        family: 'NotoSansTC-Regular'
+        weight: normal
+    color: $em-color
+    line-height: 1
+    margin: 0 0 10px 0
+.modPagArticle-dateBk--day
+    font:
+        size: $text-60
+        family: 'Montserrat-Bold'
+    color: $text-gray-400
+    margin: 0 0 5px 0
+    line-height: 1
+    letter-spacing: 1px
+.modPagArticle-dateBk--monthyear
+    font:
+        size: $text-16
+        family: 'Montserrat-Regular'
+    color: $text-gray-400
+    margin: 0
+    letter-spacing: 1.5px
+.modPagArticle-contentBk
+    width: 100%
+    @include com1280
+        width: 90%
+        padding: 0 0 0 70px
+
+
+/*附件下載區*/
+.modDownload-tit
+    letter-spacing: 0.5px
+    font:
+        family: 'NotoSerifTC-SemiBold'
+    @include ipad
+    @include com1280
+.modDownload
+    margin: 0 -25px 40px -25px
+    @include ipad
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+    @include com1280
+
+.modDownload-list
+    width: 100%
+    margin: 0 0 15px 0
+    list-style-type: none
+    display: flex
+    align-items: center
+    padding: 0 25px
+    @include ipad
+        // width: 50%
+        // padding: 0 25px
+    @include com1280
+        // align-items: flex-start
+        // width: 33.33%
+.modDownload-list--listDec
+    width: 25px
+    border-top: 2px solid $em-color
+    // margin-top: 20px
+.modDownload-list--link
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    width: calc(100% - 25px)
+    padding: 0 0 0 25px
+    // display: block
+    color: $black
+    font:
+        size: $text-16
+    @include com1280
+        font:
+            size: $text-19
+        line-height: 1.7
+        letter-spacing: 1.2px
+    &:hover,&:active,&:focus
+        color: $em-color
+.modDownload-list--link--format
+    display: inline-block
+    padding: 4px 12px
+    margin: 10px 0px 0px 20px 
+    background: $main-color
+    border-radius: 4px
+    text-transform: uppercase
+    color: #FFF
+    font:
+        family: 'Montserrat-Regular'
+    @include com1280
+        margin: 0px 0px 0px 25px 
+
+    
+
+
+/*公告超連結模組*/
+.modArticleLinkBk
+    margin: 0 -25px 40px -25px
+    @include ipad
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+    @include com1280
+        // margin: 0 -25px 60px -25px
+
+
+/*公告輪播模組*/
+.modBanner-img--bigBk
+    text-align: center
+
+.modBannerBk
+    width: 100%
+    margin: 40px auto
+    @include com1280
+        margin: 60px auto 50px auto
+
+.modBanner-img
+    width: 100%
+    height: auto
+
+.modBanner-img--big
+    @include com1280
+        // width: auto
+        height: 500px
+        object-fit: contain
+
+
+.modBanner-text
+    color: $em-color
+    // background: rgba(201, 139, 5,0.16)
+    padding: 15px 0
+

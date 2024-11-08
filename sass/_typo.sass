@@ -1,0 +1,158 @@
+/*文字相關設定*/
+/*文字單行+nowrap*/
+@mixin typoNowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+
+
+/*文字基本設定--內文黑體*/
+@mixin typoBasic
+	font:
+		family: $text-style
+		size: $text-16
+	color: $black
+	line-height: 1.5
+
+
+/*文字基本設定--標題宋體*/
+@mixin typoBasic-notoSerifTC--semibold
+	font:
+		family: $textStyle-notoSerifTC-SemiBold
+		size: $text-16
+	color: $black
+
+@mixin typoBasic-notoSerifTC--bold
+	font:
+		family: $textStyle-notoSerifTC-Bold
+		size: $text-16
+	color: $black
+
+
+h1,h2,h3,h4,h5,h6
+	margin: 0 0 0 0	
+
+h1
+	@include typoBasic-notoSerifTC--bold
+	color: $em-color
+	font:
+		size: $text-24
+	@include ipad
+		font:
+			size: $text-32
+	@include com1280
+		font:
+			size: $text-46
+	
+	
+h2
+	@include typoBasic-notoSerifTC--semibold
+	font:
+		size: $text-24
+	@include ipad
+	@include com1280
+		font:
+			size: $text-34
+	@include com1920
+
+
+h3
+	@include typoBasic
+	font:
+		size: $text-18
+		weight: normal
+	@include ipad
+	@include com1280
+		font:
+			size: $text-22
+	@include com1920
+
+
+h4
+	@include typoBasic-notoSerifTC--semibold
+	font:
+		size: $text-7
+	letter-spacing: 0.5px
+	color: $text-gray
+	@include ipad
+	@include com1280
+		font:
+			size: $text-13
+
+h5
+	@include typoBasic-notoSerifTC--semibold
+
+
+
+
+// h5
+// 	@include typoBasic
+// 	font:
+// 		size: $text-18
+// 	@include com1280
+// 		font:
+// 			size: $text-22
+	// .icon
+	// 	vertical-align: -2px
+	// 	display: inline !important
+	// 	width: auto !important
+
+// h6
+// 	@include typoBasic
+// 	font:
+// 		size: $text-15
+// 		weight: 400
+
+p
+	@include typoBasic
+	font:
+		size: $text-18
+
+
+
+
+//手機板標題
+.typoH1--phone
+	@include typoBasic
+	font:
+		size: $text-20
+	letter-spacing: 0.5px
+
+.typo-black.typo-black
+	color: $black
+	
+.typo-gray.typo-gray
+	color: $text-gray
+
+.typo-white.typo-white
+	color: #FFF
+
+.typo-danger.typo-danger
+	color: $color-danger
+
+.typo-underline
+	text-decoration: underline
+
+.typo-textAlignCenter
+	text-align: center
+
+.typo-textAlignleft
+	text-align: left
+
+.typo-textAlignright
+	text-align: right
+
+/*文字上標*/
+.typo-sup
+	vertical-align: super
+
+/*文字下標*/
+.typo-sub
+	vertical-align: sub
+
+/*4行省略並出現刪節號*/
+.typo-linclamp--4
+	display: -webkit-box
+	-webkit-box-orient: vertical
+	-webkit-line-clamp: 4
+	overflow: hidden

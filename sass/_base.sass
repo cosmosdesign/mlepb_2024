@@ -1,0 +1,334 @@
+/*基底通用設定*/
+
+/*zdialog*/
+.buttonStyle
+	width: 64px
+	height: 22px
+	line-height: 22px
+	color: #ad6c39
+	text-align: center
+	background: url(images/buticon.gif) no-repeat left top
+	border: 0.75em
+	&:hover
+		background: url(images/buticon.gif) no-repeat left -23px
+
+html
+	scroll-behavior: smooth
+body
+	@include typoBasic
+	font-size: 100%
+	// animation: indsecond02Smoke 2s 2.5s 1 normal forwards linear 
+	background-image: url(../images/ele-bg-01.png) 
+	// background-size: 100%
+
+
+.bg
+	width: 100%
+	height: auto
+	position: absolute
+	z-index: 0
+	background: url(../images/bg.png) repeat
+	// animation: noise-ani 1.5s ease-in-out 0s infinite alternate none
+
+@keyframes noise-ani
+	50%
+		background-position: 800px 600px
+	100%
+		background-position: -800px -600px
+
+
+/*反白字體*/
+::selection 
+	background: $main-color
+	color: #FFF
+
+/*按下無藍色框*/
+// *
+// 	-webkit-tap-highlight-color: rgba(66,125,245,0.54)
+
+
+/*無障礙字體設定用*/
+*
+	line-height: 1.5
+	// letter-spacing: 0.14em
+	letter-spacing: 0.10em
+	word-spacing: 0.16em
+
+p
+	// margin-bottom: 2em
+
+/*無障礙focus用*/
+*:focus
+	outline: $em-color dashed medium 
+	// border: #A6C548 dashed medium 
+	// box-shadow: 0px 0px 0px 3px  #A6C548
+
+
+/*scrollbar*/
+::-webkit-scrollbar
+	width: 10px
+	height: 8px
+
+::-webkit-scrollbar-thumb
+	// background: $black
+	// background: $em-color
+	background: #cbcbcb
+	
+::-webkit-scrollbar-track
+	// background: $main-color-500
+	background: $bg-gray-100
+
+::-webkit-scrollbar-thumb:hover 
+	background: $em-color
+
+
+/*進度條*/	
+// progress[value] 
+// 	-webkit-appearance: none
+// 	appearance: none
+// 	width: 100%
+// 	height: 8px
+
+
+// progress[value]::-webkit-progress-bar 
+// 	background-color: $text-gray-200
+// 	border-radius: 4px
+// 	box-shadow: 0 0 10px rgba(34,34,34,.08) 
+
+
+// progress[value]::-webkit-progress-value
+// 	background: $color-info-500
+// 	border-radius: 4px
+// 	box-shadow: 0 0 10px rgba(34,34,34,.12) 
+
+
+/*頁面框架及常用設定*/
+.max1920_width
+	width: 100%
+	margin: 0 auto
+	@include com1920--bk
+		//把元素限定在1920裡面
+		width: 120em
+		margin: 0 auto
+
+
+.com_width
+	width: 100%
+	margin: 0 auto
+	@include com
+		width: $viewport-computer
+
+.clear
+	clear: both
+
+.overflow-hidden
+	overflow: hidden 
+
+.floatRight
+	float: right 
+
+.floatLeft
+	float: left 
+
+.ptb-0
+	padding-top: 0px !important
+	padding-bottom: 0px !important
+.plr-0
+	padding-left: 0px !important
+	padding-right: 0px !important
+.plr-30
+	padding-left: 30px !important
+	padding-right: 30px !important
+.plr-20
+	padding-left: 20px !important
+	padding-right: 20px !important
+.plr-15
+	padding-left: 15px !important
+	padding-right: 15px !important
+.pl-5
+	padding-left: 5px !important
+.pl-10
+	padding-left: 10px !important
+.pl-20
+	padding-left: 20px !important
+.pl-30
+	padding-left: 30px !important
+.pr-20
+	padding-right: 20px !important
+.pr-30
+	padding-right: 30px !important
+.pr-60
+	padding-right: 60px !important
+.pr-80
+	padding-right: 80px !important
+.pt-30
+	padding-top: 30px !important
+.pb-40
+	padding-bottom: 40px !important
+.pb-30
+	padding-bottom: 30px !important
+.pb-20
+	padding-bottom: 20px !important
+.pb-10
+	padding-bottom: 10px !important
+.pt-10
+	padding-top: 10px !important
+.pt-15
+	padding-top: 15px !important
+.pt-20
+	padding-top: 20px !important
+.pt-25
+	padding-top: 25px !important
+.pb-15
+	padding-bottom: 15px !important
+.pb-20
+	padding-bottom: 20px !important
+.pb-25
+	padding-bottom: 25px !important
+.pb-40
+	padding-bottom: 40px !important
+.ptb-10
+	padding-top: 10px !important
+	padding-bottom: 10px !important
+.ptb-20
+	padding-top: 20px !important
+	padding-bottom: 20px !important
+.ptb-30
+	padding-top: 30px !important
+	padding-bottom: 30px !important
+.ptb-40
+	padding-top: 40px !important
+	padding-bottom: 40px !important
+
+.mt-10
+	margin-top: 10px !important
+.mt-0
+	margin-top: 0px !important
+.mt-5
+	margin-top: 5px !important
+.mt-10
+	margin-top: 10px !important
+.mt-15
+	margin-top: 15px !important
+.mt-20
+	margin-top: 20px !important
+.mt-30
+	margin-top: 30px !important
+.mt-40
+	margin-top: 40px !important
+.mt-50
+	margin-top: 50px !important
+.mt-60
+	margin-top: 60px !important
+.mt-80
+	margin-top: 80px !important
+.mb-5
+	margin-bottom: 5px !important
+.mb-8
+	margin-bottom: 8px !important
+.mb-10
+	margin-bottom: 10px !important
+.mb-15
+	margin-bottom: 15px !important
+.mb-20
+	margin-bottom: 20px !important
+.mb-25
+	margin-bottom: 25px !important
+.mb-30
+	margin-bottom: 30px !important
+.mb-40
+	margin-bottom: 40px !important
+.mb-50
+	margin-bottom: 50px !important
+.mb-80
+	margin-bottom: 80px !important
+.mr-5
+	margin-right: 5px !important
+.mr-10
+	margin-right: 10px !important
+.mr-12
+	margin-right: 12px !important
+.mr-20
+	margin-right: 20px !important
+.mr-40
+	margin-right: 40px !important
+.mr-50
+	margin-right: 50px !important
+.ml-10
+	margin-left: 10px !important
+.ml-20
+	margin-left: 20px !important
+.ml-30
+	margin-left: 30px !important
+.ml-40
+	margin-left: 40px !important
+.ml-50
+	margin-left: 50px !important
+.mr-30
+	margin-right: 30px !important
+.mlr-5
+	margin-left: 5px !important
+	margin-right: 5px !important
+.mlr-10
+	margin-left: 10px !important
+	margin-right: 10px !important
+.mlr-30
+	margin-left: 30px !important
+	margin-right: 30px !important
+.mtb-0
+	margin-top: 0px !important
+	margin-bottom: 0px !important
+.mtb-10
+	margin-top: 10px !important
+	margin-bottom: 10px !important
+.mtb-20
+	margin-top: 20px !important
+	margin-bottom: 20px !important
+.mtb-40
+	margin-top: 40px !important
+	margin-bottom: 40px !important
+.mtb-50
+	margin-top: 50px !important
+	margin-bottom: 50px !important
+.mtb-60
+	margin-top: 60px !important
+	margin-bottom: 60px !important
+.mtb-80
+	margin-top: 80px !important
+	margin-bottom: 80px !important
+
+
+/*flex 排成一排列表*/
+@mixin flexNowrap
+	display: flex
+	flex-wrap: nowrap
+	align-items: center
+
+
+/*列印隱藏區域*/
+.print_hidden
+	@include print
+		display: none
+
+/*只提供螢幕閱讀器報讀*/
+.sr-only 
+	position: absolute
+	width: 1px
+	height: 1px
+	padding: 0
+	overflow: hidden
+	clip: rect(0,0,0,0)
+	white-space: nowrap
+	border: 0
+
+
+
+
+
+
+
+
+
+
+
+

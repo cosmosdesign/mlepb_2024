@@ -1,0 +1,311 @@
+/*元素*/
+
+/*區域功能標題*/
+.eleSecTit--ind
+    @include typoBasic-PlayfairDisplay--bold
+    color: $main-color
+    font:
+        size: $text-24
+    margin-bottom: 5px
+    @include ipad
+    @include com1280
+        font:
+            size: $text-32
+    @include com1920
+.eleSecTit--page
+    @include typoBasic-PlayfairDisplay--bold
+    font:
+        size: $text-24
+    color: $em-color
+    letter-spacing: 0.5px
+    @include ipad
+    @include com1280
+        font:
+            size: $text-34
+    @include com1920
+.eleSecTit--hakka
+    font:
+        size: $text-7
+        weight: normal
+        family: $textStyle-PlayfairDisplay-Italic
+    word-spacing: 0.5px
+    letter-spacing: 0.5px
+    color: $text-gray
+    @include com1920
+        font:
+            size: $text-16
+
+    
+
+/*照片跟比例外框*/
+.eleImgBk
+    width: 100%
+    height: 100%
+    position: relative
+    padding-bottom: 56%
+    overflow: hidden
+    // background: $em-color
+    .eleImgBk-img
+        position: absolute
+        width: 100%
+        height: 100%
+        border: none
+        line-height: 0
+
+/*影片比例高度*/
+.eleVideoBk
+    width: 100%
+    height: 100%
+    position: relative
+    /*padding top跟 bottom 的高度都是依據width來計算比例*/
+    padding-bottom: 56%
+    overflow: hidden
+    @include com1280
+        padding-bottom: 45%
+    @include com1920
+        padding-bottom: 93vh
+        // padding-bottom: 38%
+    iframe
+        position: absolute
+        width: 100%
+        height: 100%
+
+/*大視口出現fb分享按鈕*/
+.eleFbBk
+    display: none
+    @include com1280
+        position: fixed
+        top: 40%
+        right: 40px
+        display: block
+        z-index: 3
+/*首頁用*/
+.eleFbBk--ind
+    top: 45%
+    right: 40px
+.eleFbBk--page
+    opacity: 0
+    @include com1920
+        top: 40%
+        right: 40px
+        z-index: 5
+    
+.eleFbBk-word
+    writing-mode: vertical-lr 
+    font:
+        size: $text-15
+        family: 'Montserrat-Bold'
+    color: $em-color
+    letter-spacing: 0.5px
+    margin: 0 0 30px 0
+    line-height: 60px
+.eleFbBk-fbBt
+    width: 60px
+    height: 60px
+    border: 1.2px solid $em-color
+    text-align: center
+    padding: 8px 0 0 0
+    display: block
+    border-radius: 30px
+
+/*回頁頂按鈕--小視口*/
+.eletopBk--phone
+    position: fixed
+    bottom: 10%
+    right: 20px
+    z-index: 5
+    opacity: 0
+    transition: all 0.5s linear
+    @include com1280
+        display: none
+.eletopBk-topBt--phone
+    width: 60px
+    height: 60px
+    border: 1.2px solid $em-color
+    text-align: center
+    padding: 8px 0 0 0
+    border-radius: 30px
+    background: none
+
+.eletopBk--com
+    display: none
+    position: fixed
+    top: 45%
+    left: 50px
+    z-index: 3
+    opacity: 0
+    transition: all 0.5s linear
+    @include com1280
+        display: block
+.eletopBk--com--page
+    @include com1920
+        // left: 110px
+        z-index: 5
+        top: 40%
+
+/*內頁回頁頂按鈕裝飾*/
+.elePageTopDec
+    display: none  
+    @include com1920
+        display: block !important
+        position: absolute !important
+        z-index: 4 !important
+        top: 1000px !important
+        left: 140px !important
+        width: 110px !important
+.elePageTopDec02
+    display: none  
+    @include com1920
+        display: block !important
+        position: absolute !important
+        z-index: 4 !important
+        top: 1300px !important
+        right: 60px !important
+        width: 200px !important
+        left: inherit !important
+
+.eletopBk-word--com
+    writing-mode: vertical-lr 
+    font:
+        size: $text-15
+        family: 'Montserrat-Bold'
+    color: $em-color
+    letter-spacing: 0.5px
+    margin: 0 0 30px -5px
+    line-height: 60px
+.eletopBk-topBt--com
+    border: none
+    background: none
+    cursor: pointer
+
+
+
+/*麵包屑*/
+.eleBitesBk
+    @include com1920
+/*麵包屑*/
+.eleBite
+    width: 100%
+    cursor: pointer
+    // padding: 22px 20px 
+    @include ipad
+        // padding: 25px 30px 
+.eleBite-link
+    position: relative
+    vertical-align: middle
+    color: $text-gray
+    line-height: 1.6
+    font:
+        size: $text-14
+        // weight: 600
+        // family: 'NotoSansTC-Regular'
+    @include com1920
+        font:
+            size: $text-16
+    .icon
+        position: relative
+        top: -2px
+        color: $em-color
+        font:
+            size: $text-8
+        padding: 0 3px 0 7px
+        @include com1920
+            font:
+                size: $text-12
+            padding: 0 5px 0 15px
+    &:last-of-type
+        // color: $black
+        .icon
+            display: none    
+    &:hover,&:active,&:focus
+        color: $em-color
+
+
+/*內頁標題按鈕*/
+.eleConTit
+    color: $black
+    letter-spacing: 0.2px
+
+
+                
+/*跳頁按鈕*/
+.eleSelPageBk
+    width: 100%
+    text-align: center
+    margin: 0px auto 
+    @include ipad
+        margin: 0px auto 200px auto 
+    @include com1280
+        margin: 60px auto 100px auto 
+
+.eleSelPageArrow
+    width: 40px
+    height: 40px
+    display: inline-block
+    border: none
+    cursor: pointer
+    transition: all 0.3s ease-in-out
+    vertical-align: -12px
+    transform: scale(0.7)
+    @include ipad
+        transform: scale(1)
+.eleSelPageArrow--left
+    background: url(../images/icon-arrow--left--big--em.svg) no-repeat
+    margin-right: -5px
+    @include ipad
+        margin-right: 15px
+    &:hover
+        transform: translateX(-25px)
+.eleSelPageArrow--right
+    background: url(../images/icon-arrow--right--big--em.svg) no-repeat
+    margin-left: -5px
+    @include ipad
+        margin-left: 15px
+    &:hover
+        transform: translateX(25px)
+.eleSelPageCount
+    width: 28px
+    height: 40px
+    text-align: center
+    display: inline-block
+    line-height: 38px
+    font:
+        size: $text-16
+    color: $text-gray
+    letter-spacing: 0.5px
+    @include ipad
+        width: 30px
+        font:
+            size: $text-18
+    &:hover,&:active,&:focus
+        color: $black
+.eleSelPageCount--pageIn
+   color: $black
+
+    
+/*附件下載*/
+.eleDownloadBt
+    width: 100%
+    padding: 25px 30px 22px 40px
+    background: $main-color
+    color: #FFF
+    display: block
+    font:
+        size: $text-18
+    line-height: 1.8
+    &:nth-last-of-type(2n)
+        background: $main-color-700
+    &:hover
+        background: $em-color
+    @include ipad
+        width: 50%
+    .eleDownloadBt-tit
+        padding: 0 20px 0 0
+        @include typoBasic
+        font:
+            size: $text-19
+            weight: 600
+        letter-spacing: 1.5px
+        color: $main-color-100
+        // line-height: 1.7
+        

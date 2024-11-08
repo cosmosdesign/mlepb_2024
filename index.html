@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <title>苗栗縣環境保護局首頁</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="zh-TW" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!--css檔連結區-->
+    <link href="css/cssreset.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- 網站區layout -->
+    <link href="css/layout.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--js檔連結區-->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <!-- i18n -->
+    <script src="i18n/jquery.i18n.js"></script>
+    <script src="i18n/jquery.i18n.messagestore.js"></script>
+    <script src="i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="i18n/jquery.i18n.language.js"></script>
+    <script src="i18n/jquery.i18n.parser.js"></script>
+    <script src="i18n/jquery.i18n.emitter.js"></script>
+    <script src="i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="i18n/i18n-config.js"></script>
+    <!--載入tweenmax-->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.js"></script>
+    <!-- parallax.js -->
+    <script src="js/parallax.js"></script>
+    <!-- 設定檔 -->
+    <script src="js/config.js"></script>
+    <!-- 本頁js -->
+    <script src="js/js-index.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/web-js.js"></script>
+
+    <!-- facebook meta -->
+    <!-- <meta property="og:url"           content="https://www.your-domain.com/your-page.html" /> -->
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="苗栗縣政府環境保護局全球資訊網" />
+    <!-- <meta property="og:description"   content="Your description" /> -->
+    <meta property="og:image"         content="http://www.mlepb.gov.tw/images/fb-cover.png" />
+    <meta property="og:image:type"    content="image/png" />
+    <meta property="og:image:width"   content="1200" />
+    <meta property="og:image:height"  content="630" />
+
+    <!-- 首頁輪播 -->
+    <!-- <link href="vendor/Owl/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="vendor/Owl/owl.carousel.js"></script>
+    <script language="javascript">
+    $(document).ready(function() {
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            autoplay: true,
+            autoplayTimeout: 5000,
+            nav: false,
+            loop: true,
+            dots: false,
+            responsive: {
+            320: {
+                items: 1
+            },
+            }
+        })
+    })
+    </script> -->
+
+    <!-- 動畫效果 -->
+    <script language="javascript">
+    $(window).on('load',function(){
+        //葉子動畫區
+        if($(window).width() >= 1280) {
+            TweenMax.to(".js-indLeaf-01", 1, {
+                delay: 2,
+                opacity: 1,
+                x: -30,
+                y: 50,
+                filter: "blur(0px)",
+            });
+        };
+
+        gsap.registerPlugin(ScrollTrigger);
+        // ScrollTrigger.saveStyles(".indBanner-main");
+
+        ScrollTrigger.matchMedia({
+        // desktop
+        "(min-width: 1280px)": function() {
+            //葉子動畫區
+            gsap.to(".js-indLeaf-04", {
+                scrollTrigger: {
+                    trigger: ".indReport-btArea--btStyle",
+                    start: "top top+=250",
+                    // endTrigger: ".indAct-link",
+                    // end: "bottom top",
+                    toggleActions: "play pause none none",
+                    scrub: false,
+                    markers: false,
+                    /*到strat定位只執行一次*/
+                    once: true,
+                },
+                opacity: 1,
+                x: -20,
+                y: 80,
+                filter: "blur(0px)",
+                ease: {ease: Power3.easeInOut, y: 0 },
+            });
+
+        },
+
+        // mobile
+        "(max-width: 768px)": function() {
+            gsap.to(".js-indLeaf-04", {
+                scrollTrigger: {
+                    trigger: ".indNews-moreBtArea",
+                    start: "top+=50 top+=250",
+                    // endTrigger: ".indAct-link",
+                    // end: "bottom top",
+                    toggleActions: "play pause none none",
+                    scrub: false,
+                    markers: false,
+                    /*到strat定位只執行一次*/
+                    once: true,
+                },
+                opacity: 1,
+                x: -10,
+                y: 80,
+                filter: "blur(0px)",
+                ease: {ease: Power3.easeInOut, y: 0 },
+            });
+
+
+        },
+
+        // all
+        "all": function() {
+            // ScrollTriggers created here aren't associated with a particular media query,
+            // so they persist.
+            //葉子動畫區
+            gsap.to(".js-indLeaf-02", {
+                scrollTrigger: {
+                    trigger: ".indNews-moreBtArea",
+                    start: "top-=100 top+=250",
+                    // endTrigger: ".indAct-link",
+                    // end: "bottom top",
+                    toggleActions: "play pause none none",
+                    scrub: false,
+                    markers: false,
+                    /*到strat定位只執行一次*/
+                    once: true,
+                },
+                opacity: 1,
+                x: 30,
+                y: 50,
+                filter: "blur(0px)",
+                ease: {ease: Power3.easeInOut, y: 0 },
+            });
+            gsap.to(".js-indLeaf-03", {
+                scrollTrigger: {
+                    trigger: ".indNews-moreBtArea",
+                    start: "top top+=250",
+                    // endTrigger: ".indAct-link",
+                    // end: "bottom top",
+                    toggleActions: "play pause none none",
+                    scrub: false,
+                    markers: false,
+                    /*到strat定位只執行一次*/
+                    once: true,
+                },
+                opacity: 1,
+                x: -40,
+                y: 100,
+                filter: "blur(0px)",
+                ease: {ease: Power3.easeInOut, y: 0 },
+            });
+
+
+
+        }
+      });
+    });
+    </script>
+
+    <script language="javascript">
+        $(window).on('load', function () {
+
+        });
+    </script>
+    <!--空品監測-->
+	<script src="js/StatusTable.js"></script>
+</head>
+
+<body>
+	<noscript>
+		<h2>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</h2>
+	</noscript>
+    
+    <!-- loading動畫 -->
+    <div class="js-patLoadingAniBg patLoading">
+        <img src="images/logo.svg"  alt="苗栗縣環保局局徽" class="patLoading-logo">
+    </div>
+
+    <div class="max1920_width">
+
+        <div class="jsNavMain">
+            <!-- main.js塞在裡面 -->
+        </div>
+
+        <div id="scene" role="main">
+            <!-- banner區 -->
+            <div class="indMainBk">
+                <!-- 網站標題區 -->
+                <article class="indMain-webNameArea">
+                    <h1 class="indMain-webNameArea--ch">
+                        苗栗縣政府環境保護局
+                    </h1>
+                    <p class="indMain-webNameArea--hakka" aria-label="苗栗縣政府環境保護局客語標音">
+                        meuˇ lid ien ziin fuˋ fanˇ gin boˋ fu kiug
+                    </p>
+                </article>
+
+                <!-- banner形象區 -->
+                <div class="indMain-banner">
+                    <picture id="banner_list" class="layer" data-depth="0.03">
+                        <!-- 橫式照片1920 -->
+                        <source media="(min-width: 1850px)" srcset="images/banner-01--1920.png" sizes="100vw" alt="環保局形象圖">
+                        <!-- 橫式照片 -->
+                        <source media="(orientation: landscape)" srcset="images/banner-01--big.png" sizes="100vw" alt="環保局形象圖">
+                        <!-- 直式照片 -->
+                        <source media="(orientation: portrait)" srcset="images/banner-01--sml.png" sizes="100vw" alt="環保局形象圖">
+                        <!-- default 預設圖片 -->
+                        <img src="images/banner-01--1920.png" alt="環保局形象圖" width="100%" />
+                    </picture>
+                </div>
+
+                <!-- 空品監測區 -->
+                <div class="indMainAirBk">
+                    <div class="indMainAir-section js-indMainAir-section1">
+                        <section class="indMainAir-titArea js-indMainAir-skew">
+                            <div class="indMainAir-skew">
+                                <p class="indMainAir-titArea--tit">空氣品質即時監測</p>
+                                <p class="indMainAir-titArea--location">苗栗</p>
+                            </div>
+                        </section>
+                        <article class="indMainAir-infoArea">
+                            <div class="indMainAir-skew">
+                                <p class="indMainAir-infoArea--info">AQI 空氣品質指標　<span id="AQI_1">0</span></p>
+                                <p class="indMainAir-infoArea--info">O<span class="typo-sub">3</span> (ppb) 臭氧/小時濃度　<span id="O3_1">0</span></p>
+                                <p class="indMainAir-infoArea--info">PM<span class="typo-sub">2.5</span> (μg/m3) 細懸浮微粒/小時濃度　<span id="PM25_1">0</span></p>
+                                <p class="indMainAir-infoArea--info">PM<span class="typo-sub">10</span> (μg/m3)懸浮微粒/小時濃度　<span id="PM10_1">0</span></p>
+                                <span class="sr-only">空氣品質</span>
+                                <span class="mt-15 indMainAir-infoArea--status" id="AQIstatus_1">--</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="indMainAir-section js-indMainAir-section2">
+                        <section class="indMainAir-titArea">
+                            <div class="indMainAir-skew">
+                                <p class="indMainAir-titArea--tit">空氣品質即時監測</p>
+                                <p class="indMainAir-titArea--location">頭份</p>
+                            </div>
+                        </section>
+                        <article class="indMainAir-infoArea">
+                            <div class="indMainAir-skew">
+                                <p class="indMainAir-infoArea--info">AQI 空氣品質指標　<span id="AQI_2">0</span></p>
+                                <p class="indMainAir-infoArea--info">O<span class="typo-sub">3</span> (ppb) 臭氧/小時濃度　<span id="O3_2">0</span></p>
+                                <p class="indMainAir-infoArea--info">PM<span class="typo-sub">2.5</span> (μg/m3) 細懸浮微粒/小時濃度　<span id="PM25_2">0</span></p>
+                                <p class="indMainAir-infoArea--info">PM<span class="typo-sub">10</span> (μg/m3)懸浮微粒/小時濃度　<span id="PM10_2">0</span></p>
+                                <span class="sr-only">空氣品質</span>
+                                <span class="mt-15 indMainAir-infoArea--status" id="AQIstatus_2">--</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="indMainAir-section js-indMainAir-section3">
+                        <section class="indMainAir-titArea">
+                            <div class="indMainAir-skew">
+                                <p class="indMainAir-titArea--tit">空氣品質即時監測</p>
+                                <p class="indMainAir-titArea--location">三義</p>
+                            </div>
+                        </section>
+                        <article class="indMainAir-infoArea">
+                            <div class="indMainAir-skew">
+                                <p class="indMainAir-infoArea--info">AQI 空氣品質指標　<span id="AQI_3">0</span></p>
+                                <p class="indMainAir-infoArea--info">O<span class="typo-sub">3</span> (ppb) 臭氧/小時濃度　<span id="O3_3">0</span></p>
+                                <p class="indMainAir-infoArea--info">PM<span class="typo-sub">2.5</span> (μg/m3) 細懸浮微粒/小時濃度　<span id="PM25_3">0</span></p>
+                                <p class="indMainAir-infoArea--info">PM<span class="typo-sub">10</span> (μg/m3)懸浮微粒/小時濃度　<span id="PM10_3">0</span></p>
+                                <span class="sr-only">空氣品質</span>
+                                <span class="mt-15 indMainAir-infoArea--status" id="AQIstatus_3">--</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="indMainAir-infoArea--timeBk">
+                        <p class="indMainAir-infoArea--time" id="StatusTime">更新時間：2022/04/13 10:00:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 網站主內容區 -->
+            <div id="acckeyC">
+
+                <!-- 最新消息區 -->
+                <div class="indNews">
+                    <img src="images/index-phone-stone--01.svg" class="indNews--dec" alt="">
+                    <img src="images/index-stone--01.svg" class="indNews--dec--maxcom layer" data-depth="0.2" alt="">
+                    <article class="indNewsArea">
+                        <p class="eleSecTit--ind">最新消息</p>
+                        <p class="eleSecTit--hakka" aria-label="最新消息客語標音">
+                            zui xin<span class="typo-sup">ˊ</span> seu<span class="typo-sup">ˊ</span> xid
+                        </p>
+                    </article>
+                    <!-- 列表 -->
+                    <section class="indNewsProArea" id="news_list">
+                        <!-- 一則消息 -->
+
+                    </section>
+                    <div class="indNews-moreBtArea">
+                        <a href="newsli.html" id="all_news" class="btnMainColorBt" title="查看全部消息">
+                            查看全部消息
+                            <img src="images/icon-arrow--right--big--white.svg" class="icon--right"  alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 陳情區 -->
+                <div class="indReport">
+                    <div class="indReport-topLayer">
+                        <article class="indReport-titArea">
+                            <p class="eleSecTit--ind">土水環境要守護</p>
+                            <p class="eleSecTit--hakka pb-10" aria-label="土水環境要守護客語標音">
+                                naiˇ suiˋ kuanˇ gin oi suˋ fu
+                            </p>
+                            <p class="eleSecTit--ind" aria-label="土淨水清永傳承客語標音">土淨水清永傳承</p>
+                            <p class="eleSecTit--hakka">
+                                naiˇ qiang suiˋ xienˊ iunˋ conˇ siinˇ
+                            </p>
+                        </article>
+                        <p class="indReport-slogan">公害污染陳情網路受理系統</p>
+                        <p class="indReport-text">
+                            烏賊車檢舉、噪音車檢舉、重大水質及事業廢棄物污染，皆可受理。歡迎民眾踴躍使用，個人資料依個人資料保護法相關規定嚴格保密。
+                        </p>
+                        <div class="indReport-btArea">
+                            <a href="https://www.mlepb.gov.tw/linksli.html?_lClass=3" id="petition_link" target="_blank"
+                                class="indReport-btArea--btStyle indReport-btArea--linkBt" title="公害陳情處理及裁處查詢">
+                                <img src="images/icon-link.svg"  alt="">
+                                <span>公害陳情處理及裁處查詢</span>
+                            </a>
+                            <article class="indReport-btArea--btStyle indReport-btArea--phoneBt">
+                                <img src="images/icon-phone.svg"  alt="">
+                                <span>
+                                    公害陳情專線
+                                    <br />
+                                    0800-066-666
+                                    <br />
+                                    037-558-558　#8
+                                </span>
+                            </article>
+                        </div>
+                    </div>
+                    <img src="images/index-phone-stone--02.svg" class="indReport--dec"  alt="">
+                    <img src="images/index-stone--02.svg" class="indReport--dec--maxcom"  alt="">
+                    <img src="images/index-stone--03.svg" class="indReport--dec03--maxcom1920 layer"
+                     data-depth="0.3"  alt="">
+                </div>
+
+                <!-- 重要連結區 -->
+                <div class="indLink">
+                    <img src="images/index-stone--04.svg" class="indLink--dec layer" data-depth="0.2"  alt="">
+                    <div class="indLink-topLayer">
+                        <article class="indLink--titArea">
+                            <p class="eleSecTit--ind">重要連結</p>
+                            <p class="eleSecTit--hakka" aria-label="重要連結客語標音">
+                                cung ieu lien<span class="typo-sup">ˇ</span> gied<span class="typo-sup">ˋ</span>
+                            </p>
+                        </article>
+                        <!-- 連結列表 -->
+                        <div class="indLink--linkArea">
+                            <div class="modLinkBk" id="links_list">
+                                <!-- 一個連結 -->
+
+                            </div>
+                        </div>
+                        <div class="indLink-moreBtArea">
+                            <a href="linksli.html" id="all_links" class="btnNoneColorBt" title="查看全部連結">
+                                查看全部連結
+                                <img src="images/icon-arrow--right--sml--sec.svg" class="icon--right"  alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 小視口回頁頂按鈕 -->
+        <div class="eletopBk--phone js-eletopBk-topBt">
+            <button class="eletopBk-topBt--phone" >
+                <img src="images/icon-top--phone.svg"  alt="回頁頂">
+            </button>
+        </div>
+
+        <!-- 大視口回頁頂按鈕 -->
+        <div class="eletopBk--com js-eletopBk-topBt">
+            <p class="eletopBk-word--com">PAGE UP</p>
+            <button class="eletopBk-topBt--com" >
+                <img src="images/icon-top.svg" alt="回頁頂">
+            </button>
+        </div>
+
+        <!-- fb分享按鈕 -->
+        <div class="eleFbBk eleFbBk--ind">
+            <p class="eleFbBk-word">FOLLOW US</p>
+            <a href="https://www.facebook.com/mlepb360" class="eleFbBk-fbBt" title="開新視窗超連結" target="_blank">
+                <img src="images/icon-fb.svg" alt="苗栗縣環境保護局facebook粉絲團">
+            </a>
+        </div>
+
+        <div class="jsFooter">
+            <!-- footer.js塞在裡面 -->
+        </div>
+
+        <!-- 葉子動畫區 -->
+        <img src="images/index-leaf--01.png" class="indLeaf-01 js-indLeaf-01"  alt="">
+        <img src="images/index-leaf--02.png" class="indLeaf-02 js-indLeaf-02"  alt="">
+        <img src="images/index-leaf--03.png" class="indLeaf-03 js-indLeaf-03"  alt="">
+        <img src="images/index-leaf--04.png" class="indLeaf-04 js-indLeaf-04"  alt="">
+
+
+        <!-- 視差滾動特效 -->
+        <script>
+            if($(window).width() >= 1280) {
+                parallaxInstance = new Parallax( document.getElementById( "scene" ) , {
+                // 參數設定[註1]
+                selector: ".layer",
+                calibrateY: true,
+                });
+            };
+        </script>
+
+    </div>
+
+</body>
+
+</html>

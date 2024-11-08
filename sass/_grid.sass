@@ -1,0 +1,60 @@
+/*斷點設置*/
+@mixin minphone
+	@media all and (min-width: 20em)/*320px*/
+		@content
+	
+@mixin iphone
+	@media all and (min-width: 25.8em)/*414px*/
+		@content
+
+@mixin ipad
+	@media all and (min-width: 48em)/*768px*/
+		@content
+
+@mixin com
+	@media all and (min-width: 64em)/*1024px*/
+		@content
+
+@mixin com1280
+	@media all and (min-width: 80em)/*1280px*/
+		@content
+
+// @mixin maxcom-1920
+// 	@media all and (min-width: 118em)/*1888px*/
+// 		@content
+// opera最大視口為1865px
+@mixin com1920
+	@media all and (min-width: 116em)/*1856px*/
+		@content
+
+@mixin com1920--bk
+	@media all and (min-width: 125em)/*2000px*/
+		@content
+
+/*列印用*/
+@mixin print
+	@media print
+		@content
+
+/*IE 11*/
+@mixin ie11
+	@media screen and (-ms-high-contrast: active),(-ms-high-contrast: none)
+		@content
+
+/*chrome 不含safari*/
+/*但edge opera也會運作*/
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)
+
+
+/*螢幕直式查詢*/
+@mixin portrait
+	@media (orientation: portrait)
+		@content
+
+/*螢幕直式橫式查詢*/
+@mixin landscape
+	@media (orientation: landscape)
+		@content
+
+
+

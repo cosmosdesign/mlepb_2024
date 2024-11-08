@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Miaoli Environmental Protection Bureau</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="zh-TW" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!--css檔連結區-->
+    <link href="css/cssreset.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- 網站區layout -->
+    <link href="css/layout.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--js檔連結區-->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <!-- i18n -->
+    <script src="i18n/jquery.i18n.js"></script>
+    <script src="i18n/jquery.i18n.messagestore.js"></script>
+    <script src="i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="i18n/jquery.i18n.language.js"></script>
+    <script src="i18n/jquery.i18n.parser.js"></script>
+    <script src="i18n/jquery.i18n.emitter.js"></script>
+    <script src="i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="i18n/i18n-config.js"></script>
+    <!--載入tweenmax-->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.js"></script>
+    <!-- parallax.js -->
+    <script src="js/parallax.js"></script>
+    <!-- 設定檔 -->
+    <script src="js/config.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css"/>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- 本頁js -->
+    <script src="js/js-newsin.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/web-js.js"></script>
+
+    <!-- facebook meta -->
+    <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Miaoli Environmental Protection Bureau - Latest news" />
+    <meta property="og:description"   content="Your description" />
+    <meta property="og:image"         content="http://www.mlepb.gov.tw/images/fb-cover.png" />
+    <meta property="og:image:type"    content="image/png" />
+    <meta property="og:image:width"   content="1200" />
+    <meta property="og:image:height"  content="630" />
+
+    <script language="javascript">
+        $(window).on('load', function () {
+
+
+        });
+    </script>
+</head>
+
+<body>
+	<noscript>
+		<h2>
+			"Your browser does not support JavaScript functionality. If the features of this website are not functioning
+        		properly, please enable JavaScript in your browser settings."
+		</h2>
+	</noscript>
+
+
+    <div class="max1920_width">
+
+        <div class="jsNavMain">
+            <!-- main.js塞在裡面 -->
+        </div>
+
+        <div id="scene" role="main">
+            <!-- 網站主內容區 -->
+            <div id="acckeyC">
+                <!-- 頁面banner區 -->
+                <div class="patPagBanner">
+                    <article class="patPagBanner-pageTitBk">
+                        <p class="eleSecTit--page mb-10">Latest news</p>
+                        <p class="eleSecTit--hakka " aria-label="Hakka phonetic notation for latest news">
+                            zui xinˊ seuˊ xidˋ
+                        </p>
+                    </article>
+                    <img src="images/page-stone--01.svg" class="patPagBanner-dec layer" data-depth="0.15" alt="">
+                    <img src="images/page-stone--02.svg" class="patPagBanner-dec02 layer" data-depth="0.3" alt="">
+                    <div class="patPagBanner-dec03 layer" alt="" data-depth="0.1" style="background-image: url('images/pageDecBanner-07.jpg') ; background-position: 0 70%;"></div>
+
+                </div>
+
+                <div class="patPagMainbody">
+                    <svg id="js-patPagMainbody-pagetitEnBk" class="patPagMainbody-pagetitEnBk">
+                        <text x="0" y="0" fill="#fff" stroke="#D8AC4E" stroke-width="1" id="patPagMainbody-pagetitEn"
+                            text-anchor="">
+                            <tspan class="patPagMainbody-pagetitEn--word js-textani">N</tspan>
+                            <tspan class="patPagMainbody-pagetitEn--word js-textani">e</tspan>
+                            <tspan class="patPagMainbody-pagetitEn--word js-textani">w</tspan>
+                            <tspan class="patPagMainbody-pagetitEn--word js-textani">s</tspan>
+                        </text>
+                    </svg>
+
+                    <!-- 頁面主要內容區 -->
+                    <input type="hidden" name="nid" id="nid">
+                    <div class="patPagPrimary pagNewsinBk">
+                        <div class="modPagArticle">
+                            <div class="modPagArticle-dateBk mt-5">
+                                <p class="modPagArticle-dateBk--tit">Date</p>
+                                <p class="modPagArticle-dateBk--day" id="news_str_date_day"></p>
+                                <p class="modPagArticle-dateBk--monthyear" id="news_str_date_month"></p>
+                            </div>
+                            <div class="modPagArticle-contentBk">
+                                <!-- 麵包屑 -->
+                                <article class="eleBite" id="breadcrumb_div">
+                                    <a href="index.html" class="eleBite-link" title="links">
+                                        index<span class="icon">▶</span>
+                                    </a>
+                                    <a href="newsli.html" class="eleBite-link" title="links">
+                                        latest news<span class="icon">▶</span>
+                                    </a>
+                                    <a href="newsli.html" class="eleBite-link" title="links">
+                                        latest news<span class="icon">▶</span>
+                                    </a>
+                                    <a href="newsin.html" class="eleBite-link" title="links">
+                                        The Miaoli County Environmental Protection Bureau held a flag-giving ceremony for the establishment of the water environment patrol team and ecological monitoring education and training<span class="icon">▶</span>
+                                    </a>
+                                </article>
+                                <!-- 文章標題 -->
+                                <h1 class="eleConTit mt-20" id="news_title">Latest news</h1>
+
+                                <!-- 發佈單位 -->
+                                <p class="modNewsProList-subArea pt-30">
+                                    <span class="modNewsProList-subArea--main">
+                                        Issued
+                                    </span>
+                                    <span class="modNewsProList-subArea--date" id="news_usergroup">
+                                    </span>
+                                </p>
+
+                                <!-- 文字編輯區 -->
+                                <article class="textBk" id="news_info">
+                                    <!-- 文編放這邊 -->
+                                </article>
+
+                                <!-- 照片輪播 -->
+                                <article class="modBannerBk" id="newspic_article">
+
+                                    <!-- 大圖 -->
+                                    <div class="swiper mySwiper2 mb-30">
+                                        <!-- Additional required wrapper -->
+                                        <div class="swiper-wrapper" id="newspic_big">
+                                            <!-- Slides -->
+                                        </div>
+                                        <!-- If we need navigation buttons -->
+                                        <button class="swiper-button-prev" style="background:none;border: none;"></button>
+                                        <button class="swiper-button-next" style="background:none;border: none;"></button>
+                                    </div>
+
+                                    <!-- 小圖thumb -->
+                                    <div class="swiper mySwiper">
+                                        <!-- Additional required wrapper -->
+                                        <div class="swiper-wrapper" id="newspic_sml">
+                                          <!-- Slides -->
+                                        </div>
+
+                                    </div>
+                                </article>
+
+                            </div>
+                        </div>
+
+                        <!-- 附件下載區 -->
+                        <div id="file_div">
+                            <p class="eleSecTit--page mb-40 modDownload-tit">Attachment download zone</p>
+                            <div class="modDownload" id="file_list">
+                            </div>
+                        </div>
+
+                        <!-- 按鈕區 -->
+                        <div class="patPagBtBk">
+                            <a href="javascript:history.back();" class="btnEmColorBt typo-textAlignright" title="back to previous">
+                                Back to previous
+                                <img src="images/icon-arrow--left--big--white.svg" class="icon--left" alt="">
+                            </a>
+
+                            <!-- Load Facebook SDK for JavaScript -->
+                            <div id="fb-root"></div>
+                            <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v14.0" nonce="45HfSGW3"></script> -->
+                            <!-- Share button code -->
+                            <div id="share_button_div"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 內頁回頁頂按鈕裝飾 -->
+                <img src="images/page-stone--03.svg" class="elePageTopDec layer" data-depth="0.3" alt="">
+
+
+            </div>
+        </div>
+
+        <!-- 小視口回頁頂按鈕 -->
+        <div class="eletopBk--phone js-eletopBk-topBt">
+            <button class="eletopBk-topBt--phone">
+                <img src="images/icon-top--phone.svg" alt="go to top">
+            </button>
+        </div>
+
+        <!-- 大視口回頁頂按鈕 -->
+        <div class="eletopBk--com eletopBk--com--page js-eletopBk-topBt">
+            <p class="eletopBk-word--com">PAGE UP</p>
+            <button class="eletopBk-topBt--com">
+                <img src="images/icon-top.svg" alt="go to top">
+            </button>
+        </div>
+
+        <!-- fb分享按鈕 -->
+        <div class="eleFbBk eleFbBk--page js-eleFbBk--page">
+            <p class="eleFbBk-word">FOLLOW US</p>
+            <a href="https://www.facebook.com/mlepb360" class="eleFbBk-fbBt" title="Open in a new window" target="_blank">
+                <img src="images/icon-fb.svg" alt=" Miaoli County Environmental Protection Department Facebook Page">
+            </a>
+        </div>
+
+
+        <div class="jsFooter">
+            <!-- footer.js塞在裡面 -->
+        </div>
+
+
+        <!-- 視差滾動特效 -->
+        <script>
+            if ($(window).width() >= 1280) {
+                parallaxInstance = new Parallax(document.getElementById("scene"), {
+                    // 參數設定[註1]
+                    selector: ".layer",
+                    calibrateY: true,
+                });
+            };
+        </script>
+        <script>
+            /* var swiper = new Swiper(".mySwiper", {
+                loop: true,
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+            var swiper2 = new Swiper(".mySwiper2", {
+                loop: true,
+                // spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                    swiper: swiper,
+                },
+            }); */
+        </script>
+    </div>
+
+</body>
+
+</html>

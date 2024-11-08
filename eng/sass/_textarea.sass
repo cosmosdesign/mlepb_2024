@@ -1,0 +1,86 @@
+/*文編內容*/
+.textBk
+	width: 100%
+	margin: 50px auto 40px auto 
+	font:
+		size: $text-22
+	line-height: 1.8
+	@include com1280
+		margin: 60px auto 40px auto
+	img
+		width: 100% 
+		height: auto 
+		margin: 0 auto 40px auto
+		@include ipad
+		@include com1280
+			width: 80% 
+			height: auto
+			margin: 0 10% 40px 10%
+		@include com1920
+			// width: 75% 
+			// height: auto
+			// margin: 0 12.5% 40px 12.5%
+	.textImg,.textImgNote
+		width: 100%
+		margin: 0 auto 50px auto
+	h6
+		@include typoBasic
+		font:
+			size: $text-17
+			weight: normal
+		line-height: 1.8 
+		margin: 0 auto 10px auto
+		color: $em-color
+		@include com1280
+			font:
+				size: $text-22
+				// weight: normal
+	p
+		font:
+			size: $text-16
+		line-height: 2
+		@include com1280
+			font:
+				size: $text-18
+				weight: 400
+	// @include ipad
+	// 	width: 75%
+	// @include com1280
+	// 	width: 70%
+		// padding: 0 0 0 1px
+// .textImgNote
+// 	width: auto
+// 	display: inline-block
+// 	border-top: 5px solid $main-color
+// 	@include typoBasic
+// 	font:
+// 		size: $text-18
+// 		weight: 600
+// 	line-height: 1.8 
+// 	padding: 20px 0 0 0
+// 	margin: 0 20px
+// 	@include com1280
+// 		margin: 0 50px
+
+.textArticleTit
+	@include typoBasic
+	font:
+		size: $text-17
+		weight: normal
+	line-height: 1.8 
+	margin: 0 auto 10px auto
+	color: $em-color
+	@include com1280
+		font:
+			size: $text-24
+			// weight: normal
+.textArticleParagraph
+	font:
+		size: $text-16
+	line-height: 2
+	@include com1280
+		font:
+			size: $text-20
+			weight: 400
+
+
