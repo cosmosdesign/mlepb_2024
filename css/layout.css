@@ -85,13 +85,13 @@
 /*文字基本設定--標題宋體*/
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0 0;
+  color: #bd8205 !important;
 }
 
 h1 {
   font-family: "NotoSerifTC-Bold";
   font-size: 1rem;
   color: #494949;
-  color: #bd8205;
   font-size: 1.5rem;
 }
 @media all and (min-width: 48em) {
@@ -135,7 +135,6 @@ h4 {
   color: #494949;
   font-size: 0.4375rem;
   letter-spacing: 0.5px;
-  color: #848484;
 }
 @media all and (min-width: 80em) {
   h4 {
@@ -1890,12 +1889,11 @@ a:hover, a:active, a:focus {
   }
 }
 
-.patnavFirstArea .patnavFirstArea-tit {
+.patnavFirstArea-tit {
   margin-bottom: 20px;
   width: 100%;
   display: block;
   color: #848484;
-  cursor: pointer;
   border: none;
   background: none;
   text-align: left;
@@ -1905,35 +1903,32 @@ a:hover, a:active, a:focus {
   font-family: "NotoSansTC-Regular";
 }
 @media all and (min-width: 48em) {
-  .patnavFirstArea .patnavFirstArea-tit {
+  .patnavFirstArea-tit {
     font-size: 1.25rem;
   }
 }
 @media all and (min-width: 80em) {
-  .patnavFirstArea .patnavFirstArea-tit {
+  .patnavFirstArea-tit {
     margin-bottom: 15px;
   }
 }
-.patnavFirstArea .patnavSecondArea {
+
+.patnavSecondArea {
   margin-bottom: 20px;
-  display: none;
 }
-@media all and (min-width: 80em) {
-  .patnavFirstArea .patnavSecondArea {
-    display: block;
-  }
-}
-.patnavFirstArea .patnavSecondArea-li {
+.patnavSecondArea-li {
   list-style: none;
   padding-bottom: 7px;
 }
-.patnavFirstArea .patnavSecondArea-link {
+
+.patnavSecondArea-link {
   text-decoration: none;
   line-height: 1.6;
   font-size: 1rem;
   color: #494949;
 }
-.patnavFirstArea .patnavSecondArea-link--active {
+
+.patnavSecondArea-link--active {
   color: #bd8205;
 }
 
@@ -4393,5 +4388,40 @@ a:hover, a:active, a:focus {
 
 .jssecond-level-area {
   display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+[role=dialog] {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+/* native <dialog> element uses the ::backdrop pseudo-element */
+/* dialog::backdrop, */
+.dialog-backdrop {
+  display: none;
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.dialog-backdrop.active {
+  display: block;
+}
+
+.no-scroll {
+  overflow-y: auto !important;
+}
+
+/* this is added to the body when a dialog is open */
+.has-dialog {
+  overflow: hidden;
 }
 /*# sourceMappingURL=layout.css.map */

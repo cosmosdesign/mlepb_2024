@@ -36,9 +36,11 @@ h1,h2,h3,h4,h5,h6,p,a
 	margin: 0 0 0 0	
 	letter-spacing: 0.5px
 
+h1,h2,h3,h4,h5,h6
+	color: $em-color !important
+
 h1
 	@include typoBasic-PlayfairDisplay--bold
-	color: $em-color
 	font:
 		size: $text-24
 	@include ipad
@@ -78,7 +80,6 @@ h4
 	font:
 		size: $text-7
 	letter-spacing: 0.5px
-	color: $text-gray
 	@include ipad
 	@include com1280
 		font:

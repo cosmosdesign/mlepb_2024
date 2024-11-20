@@ -104,19 +104,19 @@ function ShowNavigation(sysconfig, navigation) {
                     中文網站
                 </span>
             </a>
-            <button class="patSearchBt js-navSearchBt">
+            <button class="patSearchBt js-navSearchBt" type="button" aria-expanded="false" onclick="openDialog('dialog2', this)">
                 <img src="images/icon-serach--white.svg" class="patSearchBt-icon" alt="Open website search function">
                 <span class="patSearchBt-text">
                     SEARCH
                 </span>
             </button>
-            <button class="patheaderBt js-navOpenBt">
+            <button class="patheaderBt js-navOpenBt" type="button" aria-expanded="false" onclick="openDialog('dialog1', this)">
                 <img src="images/icon-hamburger--white.svg" class="patheaderBt-icon" alt="Open website link menu">
             </button>
         </header>
 
         <!-- 開合選單區 -->
-        <div class="patnavBk js-patnavBk">
+        <div class="hidden" role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true" aria-describedby="dialog1_desc">
             <div class="patnav js-patnavContent">
                 <div class="patnav-head">
                     <a href="index.html" title="go to` + sysconfig[19].setvalue + ` index" class="js-navOpenfocus js-tabnone" tabindex="-1">
@@ -129,64 +129,58 @@ function ShowNavigation(sysconfig, navigation) {
                     <img src="images/nav-dec02.png" class="patnavDecBk--dec02" alt="">
                 </div>
 
-                <div class="patnavSectionBk">
-                    <div class="patnavSection">
-                        <section class="patnavFirstArea js-navFirstLink">
-                            <button class="patnavFirstArea-tit js-linkOpen js-comtabno" aria-expanded="false" tabindex="-1">
-                                About us
-                            </button>
-                            <section class="patnavSecondArea js-navSecondLink">
-                            `;
-                            var aboutus_id = $.UrlParam("aboutus_id");
-                            $.each(aboutus_option, function (key, values) {
-                                var aboutus_ss = (aboutus_id == values[0]) ? "patnavSecondArea-link--active" : "";
+                <ol class="patnavSectionBk">
+                    <li class="patnavSection">
+                        <span class="patnavFirstArea-tit">
+                            About us
+                        </span>
+                        <ul class="patnavSecondArea">
+                        `;
+                        var aboutus_id = $.UrlParam("aboutus_id");
+                        $.each(aboutus_option, function (key, values) {
+                            var aboutus_ss = (aboutus_id == values[0]) ? "patnavSecondArea-link--active" : "";
 
-                                NavContent += `
-                                <li class="patnavSecondArea-li"><a href="about.html?aboutus_id=` + values[0] + `" class="patnavSecondArea-link js-tabnone ` + aboutus_ss + `" title="` + values[1] + `" tabindex="-1">` + values[1] + `</a></li>
-                                `;
-                            });
                             NavContent += `
-                            </section>
-                        </section>
-                    </div>
-                    <div class="patnavSection">
-                        <section class="patnavFirstArea js-navFirstLink">
-                            <button class="patnavFirstArea-tit js-linkOpen js-comtabno" aria-expanded="false"  tabindex="-1">
-                                Environmental Protection
-                            </button>
-                            <section class="patnavSecondArea js-navSecondLink">
+                            <li class="patnavSecondArea-li"><a href="about.html?aboutus_id=` + values[0] + `" class="patnavSecondArea-link js-tabnone ` + aboutus_ss + `" title="` + values[1] + `" tabindex="-1">` + values[1] + `</a></li>
                             `;
-                            var affairs_id = $.UrlParam("affairs_id");
-                            $.each(affairs_option, function (key, values) {
-                                var affairs_ss = (affairs_id == values[0]) ? "patnavSecondArea-link--active" : "";
+                        });
+                        NavContent += `
+                        </ul>
+                    </li>
+                    <li class="patnavSection">
+                        <span class="patnavFirstArea-tit">
+                            Environmental Protection
+                        </span>
+                        <ul class="patnavSecondArea">
+                        `;
+                        var affairs_id = $.UrlParam("affairs_id");
+                        $.each(affairs_option, function (key, values) {
+                            var affairs_ss = (affairs_id == values[0]) ? "patnavSecondArea-link--active" : "";
 
-                                NavContent += `
-                                <li class="patnavSecondArea-li"><a href="business.html?affairs_id=` + values[0] + `" class="patnavSecondArea-link js-tabnone ` + affairs_ss + `" title="` + values[1] + `" tabindex="-1">` + values[1] + `</a></li>
-                                `;
-                            });
                             NavContent += `
-                            </section>
-                        </section>
-                    </div>
-                    <div class="patnavSection">
-                        <section class="patnavFirstArea js-navFirstLink">
-                            <button class="patnavFirstArea-tit js-linkOpen js-comtabno" aria-expanded="false" tabindex="-1">
-                                Latest news
-                            </button>
-                            <section class="patnavSecondArea js-navSecondLink">
+                            <li class="patnavSecondArea-li"><a href="business.html?affairs_id=` + values[0] + `" class="patnavSecondArea-link js-tabnone ` + affairs_ss + `" title="` + values[1] + `" tabindex="-1">` + values[1] + `</a></li>
                             `;
-                            var _nClass = $.UrlParam("_nClass");
-                            $.each(news_class_option, function (key, values) {
-                                var class_ss = (_nClass == values[0]) ? "patnavSecondArea-link--active" : "";
+                        });
+                        NavContent += `
+                        </ul>
+                    </li>
+                    <li class="patnavSection">
+                        <span class="patnavFirstArea-tit">
+                            Latest news
+                        </span>
+                        <ul class="patnavSecondArea">
+                        `;
+                        var _nClass = $.UrlParam("_nClass");
+                        $.each(news_class_option, function (key, values) {
+                            var class_ss = (_nClass == values[0]) ? "patnavSecondArea-link--active" : "";
 
-                                NavContent += `
-                                <li class="patnavSecondArea-li"><a href="newsli.html?_nClass=` + values[0] + `" class="patnavSecondArea-link js-tabnone ` + class_ss + `" title="` + values[1] + `" tabindex="-1">` + values[1] + `</a></li>
-                                `;
-                            });
                             NavContent += `
-                            </section>
-                        </section>
-                    </div>
+                            <li class="patnavSecondArea-li"><a href="newsli.html?_nClass=` + values[0] + `" class="patnavSecondArea-link js-tabnone ` + class_ss + `" title="` + values[1] + `" tabindex="-1">` + values[1] + `</a></li>
+                            `;
+                        });
+                        NavContent += `
+                        </ul>
+                    </li>
                     `
 
                     var contact_ss = (location.pathname == "/contact.html") ? "patnavSecondArea-link--active" : "";
@@ -194,35 +188,29 @@ function ShowNavigation(sysconfig, navigation) {
                     var acc_ss = (location.pathname == "/acc.html") ? "patnavSecondArea-link--active" : "";
 
                     NavContent += `
-                    <div class="patnavSection">
-                        <section class="patnavFirstArea js-navFirstLink">
-                            <button class="patnavFirstArea-tit js-linkOpen js-comtabno" aria-expanded="false"  tabindex="-1">
-                                Agency information
-                            </button>
-                            <section class="patnavSecondArea js-navSecondLink">
-                                <!-- <li class="patnavSecondArea-li"><a href="contact.html" class="patnavSecondArea-link js-tabnone ` + contact_ss + `" title="contact us" tabindex="-1">contact us</a></li>
-                                <li class="patnavSecondArea-li"><a href="howtogo.html" class="patnavSecondArea-link js-tabnone ` + howtogo_ss + `" title="traffic information" tabindex="-1">traffic information</a></li>
-                                <li class="patnavSecondArea-li"><a href="acc.html" class="patnavSecondArea-link js-tabnone ` + acc_ss + `" title="Sitemap"  tabindex="-1">Sitemap</a></li> -->
-                                <li class="patnavSecondArea-li"><a href="../" class="patnavSecondArea-link js-tabnone" title="中文版網站" tabindex="-1">中文版網站</a></li>
-                            </section>
+                    <li class="patnavSection">
+                        <span class="patnavFirstArea-tit">
+                            Agency information
+                        </span>
+                        <section class="patnavSecondArea">
+                            <!-- <li class="patnavSecondArea-li"><a href="contact.html" class="patnavSecondArea-link js-tabnone ` + contact_ss + `" title="contact us" tabindex="-1">contact us</a></li>
+                            <li class="patnavSecondArea-li"><a href="howtogo.html" class="patnavSecondArea-link js-tabnone ` + howtogo_ss + `" title="traffic information" tabindex="-1">traffic information</a></li>
+                            <li class="patnavSecondArea-li"><a href="acc.html" class="patnavSecondArea-link js-tabnone ` + acc_ss + `" title="Sitemap"  tabindex="-1">Sitemap</a></li> -->
+                            <li class="patnavSecondArea-li"><a href="../" class="patnavSecondArea-link js-tabnone" title="中文版網站" tabindex="-1">中文版網站</a></li>
                         </section>
-                    </div>
-                </div>
+                    </li>
+                </ol>
 
                 <!-- 關閉按鈕，放在最後讓無障礙使用者關閉 -->
-                <button class="patnav-navCloseBt js-navCloseBt js-tabnone" tabindex="-1">
+                <button class="patnav-navCloseBt js-navCloseBt js-tabnone" type="button" onclick="closeDialog(this)" tabindex="-1">
                     <img src="images/icon-close--white.svg" alt="Close website link menu" class="patnav-navCloseBt--icon">
                 </button>
 
             </div>
-            <div>
-                <div class="patnavBg js-navBg"></div>
-                <div class="patnavBg js-navBg"></div>
-            </div>
         </div>
 
         <!-- 搜尋區 -->
-        <div class="patSearchBk js-patSearchBk">
+        <div class="patSearchBk js-patSearchBk hidden" role="dialog" id="dialog2" aria-labelledby="dialog2_label" aria-modal="true" aria-describedby="dialog2_desc">
             <div class="patSearch js-patSearchContent">
                 <div class="patSearchArea">
                     <p class="patSearchArea-tit pb-30">
@@ -239,14 +227,11 @@ function ShowNavigation(sysconfig, navigation) {
 
                 </div>
                 <!-- 關閉按鈕，放在最後讓無障礙使用者關閉 -->
-                <button class="patnav-navCloseBt js-searchCloseBt js-tabnone" tabindex="-1">
+                <button type="button" class="patnav-navCloseBt js-searchCloseBt js-tabnone" onclick="closeDialog(this)" tabindex="-1">
                     <img src="images/icon-close--white.svg" class="patnav-navCloseBt--icon" alt="close search area">
                 </button>
             </div>
-            <div>
-                <div class="patSearchBg js-searchBg"></div>
-                <div class="patSearchBg js-searchBg"></div>
-            </div>
+           
         </div>
 
         <!-- 大視口快速連結header區 -->

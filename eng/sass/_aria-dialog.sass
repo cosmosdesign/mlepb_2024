@@ -1,0 +1,29 @@
+// Modal Dialog 控制焦點js
+.hidden 
+	display: none
+
+[role="dialog"]
+	background-color: #fff
+	min-height: 100vh
+
+/* native <dialog> element uses the ::backdrop pseudo-element */
+/* dialog::backdrop, */
+.dialog-backdrop 
+	display: none
+	position: fixed
+	overflow-y: auto
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 10
+
+.dialog-backdrop.active 
+	display: block
+
+.no-scroll 
+	overflow-y: auto !important
+
+/* this is added to the body when a dialog is open */
+.has-dialog 
+	overflow: hidden

@@ -25,6 +25,9 @@ $(document).ready(function () {
             LoadSysConfig(sysconfig);
             ShowNavigation(sysconfig, navigation);
             ShowFooter(sysconfig, navigation);
+            // import 焦點限定js
+            // $.getScript("js/web-js.js");
+
 
             //banner形象區
             if (banner_list != "" && banner_list != undefined) {
