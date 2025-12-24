@@ -280,15 +280,6 @@ body {
   background: url(../images/bg.png) repeat;
 }
 
-@-webkit-keyframes noise-ani {
-  50% {
-    background-position: 800px 600px;
-  }
-  100% {
-    background-position: -800px -600px;
-  }
-}
-
 @keyframes noise-ani {
   50% {
     background-position: 800px 600px;
@@ -338,7 +329,7 @@ body {
   background: #bd8205;
 }
 
-/*進度條*/	
+/*進度條*/
 /*頁面框架及常用設定*/
 .max1920_width {
   width: 100%;
@@ -711,7 +702,6 @@ body {
 /*按鈕部件*/
 /*連結基本樣式*/
 a {
-  -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   text-decoration: none;
   color: #bd8205;
@@ -991,7 +981,6 @@ a:hover, a:active, a:focus {
   font-family: "Montserrat-Medium", serif, "NotoSansTC-Medium", serif, "Microsoft JhengHei" !important;
   font-size: 1.125rem !important;
   color: #494949 !important;
-  -webkit-transition: all 0.5s linear !important;
   transition: all 0.5s linear !important;
 }
 .ui.selection.dropdown:hover {
@@ -1025,7 +1014,6 @@ a:hover, a:active, a:focus {
   font-family: "Montserrat-Medium", serif, "NotoSansTC-Medium", serif, "Microsoft JhengHei" !important;
   font-size: 1.125rem !important;
   color: #494949 !important;
-  -webkit-transition: all 0.3s linear !important;
   transition: all 0.3s linear !important;
   overflow: hidden !important;
 }
@@ -1061,7 +1049,6 @@ a:hover, a:active, a:focus {
   font-size: 1.125rem !important;
   font-weight: 600 !important;
   color: #494949 !important;
-  -webkit-transition: all 0.3s linear !important;
   transition: all 0.3s linear !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
@@ -1229,9 +1216,7 @@ a:hover, a:active, a:focus {
 }
 
 .eleFbBk-word {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
   font-size: 0.9375rem;
   font-family: "Montserrat-Bold";
   color: #bd8205;
@@ -1257,7 +1242,6 @@ a:hover, a:active, a:focus {
   right: 20px;
   z-index: 5;
   opacity: 0;
-  -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 @media all and (min-width: 80em) {
@@ -1283,7 +1267,6 @@ a:hover, a:active, a:focus {
   left: 50px;
   z-index: 3;
   opacity: 0;
-  -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 @media all and (min-width: 80em) {
@@ -1330,9 +1313,7 @@ a:hover, a:active, a:focus {
 }
 
 .eletopBk-word--com {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
   font-size: 0.9375rem;
   font-family: "Montserrat-Bold";
   color: #bd8205;
@@ -1414,16 +1395,13 @@ a:hover, a:active, a:focus {
   display: inline-block;
   border: none;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   vertical-align: -12px;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
+  transform: scale(0.7);
 }
 @media all and (min-width: 48em) {
   .eleSelPageArrow {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -1437,8 +1415,7 @@ a:hover, a:active, a:focus {
   }
 }
 .eleSelPageArrow--left:hover {
-  -webkit-transform: translateX(-25px);
-          transform: translateX(-25px);
+  transform: translateX(-25px);
 }
 
 .eleSelPageArrow--right {
@@ -1451,8 +1428,7 @@ a:hover, a:active, a:focus {
   }
 }
 .eleSelPageArrow--right:hover {
-  -webkit-transform: translateX(25px);
-          transform: translateX(25px);
+  transform: translateX(25px);
 }
 
 .eleSelPageCount {
@@ -1876,14 +1852,9 @@ a:hover, a:active, a:focus {
 }
 @media all and (min-width: 80em) {
   .patnavSectionBk {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: start;
+    flex-wrap: wrap;
   }
 }
 @media all and (min-width: 116em) {
@@ -2014,16 +1985,7 @@ a:hover, a:active, a:focus {
   color: #494949;
   border: 1px solid #EAEAEA;
 }
-.patSearchArea-input::-webkit-input-placeholder {
-  color: #494949;
-}
 .patSearchArea-input::-moz-placeholder {
-  color: #494949;
-}
-.patSearchArea-input:-ms-input-placeholder {
-  color: #494949;
-}
-.patSearchArea-input::-ms-input-placeholder {
   color: #494949;
 }
 .patSearchArea-input::placeholder {
@@ -2062,14 +2024,9 @@ a:hover, a:active, a:focus {
     top: 35px;
     margin: 0 auto;
     display: block;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    justify-content: center;
+    flex-wrap: nowrap;
     width: 900px;
   }
 }
@@ -2094,8 +2051,7 @@ a:hover, a:active, a:focus {
   width: 300px;
   padding: 20px 15px;
   border-top: 5px solid #bd8205;
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
   background: #FFF;
 }
 
@@ -2143,14 +2099,9 @@ a:hover, a:active, a:focus {
   position: relative;
   z-index: 2;
   background: #F7F6ED;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: start;
+  flex-wrap: wrap;
 }
 
 .patFooter-openBtBk {
@@ -2193,15 +2144,12 @@ a:hover, a:active, a:focus {
   width: 40px;
   height: 40px;
   margin: 0 0 3px 0;
-  -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 
 .patFooter-openBt--icon--rotate {
-  -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .patFooter-openBt--text {
@@ -2246,15 +2194,9 @@ a:hover, a:active, a:focus {
 .patFooter-linkBk {
   width: 100%;
   padding: 40px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-transition: all 0.5s linear;
+  justify-content: start;
+  flex-wrap: wrap;
   transition: all 0.5s linear;
 }
 @media all and (min-width: 64em) {
@@ -2441,16 +2383,12 @@ a:hover, a:active, a:focus {
   position: relative;
   z-index: 1;
   padding: 100px 0 0px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 @media all and (min-width: 80em) {
   .patPagBanner {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
@@ -2562,14 +2500,68 @@ a:hover, a:active, a:focus {
   }
 }
 
+.patPagBanner-dec04 {
+  display: none !important;
+}
+@media all and (min-width: 64em) {
+  .patPagBanner-dec04 {
+    display: block !important;
+    position: absolute !important;
+    top: 45px !important;
+    left: 0px !important;
+    width: 700px !important;
+    height: 300px !important;
+  }
+}
+@media all and (min-width: 80em) {
+  .patPagBanner-dec04 {
+    top: 45px !important;
+    left: 55px !important;
+    width: 750px !important;
+    height: 350px !important;
+  }
+}
+@media all and (min-width: 116em) {
+  .patPagBanner-dec04 {
+    top: 70px !important;
+    left: 20px !important;
+    width: 1200px !important;
+    height: 500px !important;
+  }
+}
+
+.patPagBanner-dec05 {
+  position: absolute !important;
+  z-index: 1 !important;
+  top: 130px !important;
+  left: -70px !important;
+  display: none !important;
+}
+@media all and (min-width: 64em) {
+  .patPagBanner-dec05 {
+    display: block !important;
+    top: 80px !important;
+    left: inherit !important;
+    right: 240px !important;
+  }
+}
+@media all and (min-width: 80em) {
+  .patPagBanner-dec05 {
+    right: 180px !important;
+  }
+}
+@media all and (min-width: 116em) {
+  .patPagBanner-dec05 {
+    right: 360px !important;
+    top: 190px !important;
+  }
+}
+
 .patPagMainbody {
   position: relative;
   z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 @media all and (min-width: 80em) {
   .patPagMainbody {
@@ -2766,16 +2758,7 @@ a:hover, a:active, a:focus {
   font-family: "Montserrat-Medium", "NotoSansTC-Medium";
   position: relative;
 }
-.patPagPrimaryTitBk-select::-webkit-input-placeholder {
-  color: #FFF;
-}
 .patPagPrimaryTitBk-select::-moz-placeholder {
-  color: #FFF;
-}
-.patPagPrimaryTitBk-select:-ms-input-placeholder {
-  color: #FFF;
-}
-.patPagPrimaryTitBk-select::-ms-input-placeholder {
   color: #FFF;
 }
 .patPagPrimaryTitBk-select::placeholder {
@@ -2799,16 +2782,7 @@ a:hover, a:active, a:focus {
   font-family: "Montserrat-Medium", "NotoSansTC-Medium";
   position: relative;
 }
-.patPagPrimaryTitBk-search::-webkit-input-placeholder {
-  color: #FFF;
-}
 .patPagPrimaryTitBk-search::-moz-placeholder {
-  color: #FFF;
-}
-.patPagPrimaryTitBk-search:-ms-input-placeholder {
-  color: #FFF;
-}
-.patPagPrimaryTitBk-search::-ms-input-placeholder {
   color: #FFF;
 }
 .patPagPrimaryTitBk-search::placeholder {
@@ -2834,21 +2808,14 @@ a:hover, a:active, a:focus {
   width: 100%;
   position: relative;
   right: -30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  flex-wrap: wrap;
+  justify-content: end;
   margin: 50px 0;
 }
 @media all and (min-width: 48em) {
   .patPagBtBk {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     right: 0;
     margin: 70px 0;
   }
@@ -2857,7 +2824,7 @@ a:hover, a:active, a:focus {
   margin: 0 8px;
 }
 
-/*首頁*/		
+/*首頁*/
 /*banner形象區*/
 .indMainBk {
   width: 100%;
@@ -3001,28 +2968,22 @@ a:hover, a:active, a:focus {
 .indMainAir-section {
   display: none;
   opacity: 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 @media all and (min-width: 48em) {
   .indMainAir-section {
-    -ms-flex-wrap: no-wrap;
-        flex-wrap: no-wrap;
+    flex-wrap: no-wrap;
   }
 }
 .indMainAir-section:nth-of-type(1) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   opacity: 1;
 }
 
 @media all and (min-width: 48em) {
   .indMainAir-skew {
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-    -webkit-transform: skewX(-20deg);
-            transform: skewX(-20deg);
+    transform-origin: bottom;
+    transform: skewX(-20deg);
   }
 }
 
@@ -3035,10 +2996,8 @@ a:hover, a:active, a:focus {
   .indMainAir-titArea {
     opacity: 1;
     width: 30%;
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-    -webkit-transform: skewX(20deg);
-            transform: skewX(20deg);
+    transform-origin: bottom;
+    transform: skewX(20deg);
   }
 }
 @media all and (min-width: 64em) {
@@ -3090,10 +3049,8 @@ a:hover, a:active, a:focus {
   .indMainAir-infoArea {
     opacity: 1;
     width: 70%;
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-    -webkit-transform: skewX(20deg);
-            transform: skewX(20deg);
+    transform-origin: bottom;
+    transform: skewX(20deg);
     padding: 30px 20px 20px 20px;
   }
 }
@@ -3206,11 +3163,8 @@ a:hover, a:active, a:focus {
 @media all and (min-width: 80em) {
   .indNews {
     overflow: inherit;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 @media all and (min-width: 116em) {
@@ -3259,8 +3213,6 @@ a:hover, a:active, a:focus {
 }
 @media all and (min-width: 80em) {
   .indNewsProArea {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 80%;
   }
@@ -3274,20 +3226,14 @@ a:hover, a:active, a:focus {
 
 .indNews-moreBtArea {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  justify-content: end;
   position: relative;
   z-index: 2;
 }
 @media all and (min-width: 64em) {
   .indNews-moreBtArea {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     padding: 40px 0 0 0;
   }
 }
@@ -3437,30 +3383,18 @@ a:hover, a:active, a:focus {
 }
 @media all and (min-width: 64em) {
   .indReport-btArea {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: start;
+    justify-content: center;
   }
 }
 
 .indReport-btArea--btStyle {
   width: 100%;
   padding: 20px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: 0 0 12px 0;
   color: #FFF;
 }
@@ -3512,11 +3446,8 @@ a:hover, a:active, a:focus {
 }
 @media all and (min-width: 80em) {
   .indLink-topLayer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
@@ -3575,12 +3506,8 @@ a:hover, a:active, a:focus {
 
 .indLink-moreBtArea {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  justify-content: end;
   position: relative;
   z-index: 2;
   padding: 10px 10px 0 30px;
@@ -3606,8 +3533,7 @@ a:hover, a:active, a:focus {
     display: block;
     top: 210px;
     right: 210px;
-    -webkit-filter: blur(15px);
-            filter: blur(15px);
+    filter: blur(15px);
     opacity: 0;
   }
 }
@@ -3618,8 +3544,7 @@ a:hover, a:active, a:focus {
   width: 80px;
   left: 0px;
   top: 1600px;
-  -webkit-filter: blur(15px);
-          filter: blur(15px);
+  filter: blur(15px);
 }
 @media all and (min-width: 80em) {
   .indLeaf-02 {
@@ -3647,8 +3572,7 @@ a:hover, a:active, a:focus {
     top: 1600px;
     left: 195px;
     opacity: 0;
-    -webkit-filter: blur(8px);
-            filter: blur(8px);
+    filter: blur(8px);
   }
 }
 
@@ -3657,8 +3581,7 @@ a:hover, a:active, a:focus {
   width: 100px;
   right: 0px;
   top: 1700px;
-  -webkit-filter: blur(15px);
-          filter: blur(15px);
+  filter: blur(15px);
   opacity: 0;
 }
 @media all and (min-width: 80em) {
@@ -3770,11 +3693,8 @@ a:hover, a:active, a:focus {
 
 /*重要連結模組*/
 .modLinkBk {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -3782,12 +3702,8 @@ a:hover, a:active, a:focus {
   width: 100%;
   border: 1px solid #EAEAEA;
   padding: 20px 60px 16px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   justify-items: stretch;
   position: relative;
   margin-top: -1px;
@@ -3797,8 +3713,7 @@ a:hover, a:active, a:focus {
 }
 @media all and (min-width: 80em) {
   .modLink {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 }
 @media all and (min-width: 116em) {
@@ -3814,15 +3729,9 @@ a:hover, a:active, a:focus {
   background: rgb(117, 153, 9);
   position: absolute;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 /*內頁模組*/
@@ -3831,11 +3740,8 @@ a:hover, a:active, a:focus {
 }
 @media all and (min-width: 80em) {
   .modPagArticle {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 }
 
@@ -3897,23 +3803,16 @@ a:hover, a:active, a:focus {
 @media all and (min-width: 48em) {
   .modDownload {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 .modDownload-list {
   width: 100%;
   margin: 0 0 15px 0;
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 0 25px;
 }
 .modDownload-list--listDec {
@@ -3922,14 +3821,9 @@ a:hover, a:active, a:focus {
 }
 
 .modDownload-list--link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   width: calc(100% - 25px);
   padding: 0 0 0 25px;
   color: #494949;
@@ -3970,11 +3864,8 @@ a:hover, a:active, a:focus {
 @media all and (min-width: 48em) {
   .modArticleLinkBk {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 /*公告輪播模組*/
@@ -4023,11 +3914,8 @@ a:hover, a:active, a:focus {
 }
 @media all and (min-width: 80em) {
   .pagNewsliListBk {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 0 50px;
   }
 }
@@ -4063,11 +3951,8 @@ a:hover, a:active, a:focus {
 }
 @media all and (min-width: 80em) {
   .pagDownliListBk {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 0 50px;
   }
 }
@@ -4114,16 +3999,10 @@ a:hover, a:active, a:focus {
 }
 @media all and (min-width: 48em) {
   .pagQaList {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
     padding: 20px 60px 30px 60px;
   }
 }
@@ -4232,11 +4111,8 @@ a:hover, a:active, a:focus {
 }
 @media all and (min-width: 80em) {
   .pagLinksliListBk {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 0 100px;
     margin: 60px auto 150px auto;
   }
@@ -4259,11 +4135,8 @@ a:hover, a:active, a:focus {
 }
 @media all and (min-width: 80em) {
   .pagsearchBk {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 0 100px;
     margin: 60px auto 150px auto;
   }
@@ -4385,8 +4258,7 @@ a:hover, a:active, a:focus {
 }
 
 .jsRotate {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .jssecond-level-area {
@@ -4426,5 +4298,4 @@ a:hover, a:active, a:focus {
 /* this is added to the body when a dialog is open */
 .has-dialog {
   overflow: hidden;
-}
-/*# sourceMappingURL=layout.css.map */
+}/*# sourceMappingURL=layout.css.map */
